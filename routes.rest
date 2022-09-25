@@ -1,0 +1,13 @@
+// LOCALHOST
+### GET
+http://localhost:3000/contacts
+
+###GET
+http://localhost:3000/contacts/?id=632fa26fde834ce10fee5fc8
+
+// PRODUCTION
+### GET
+https://cse341-lesson1.onrender.com/contacts
+
+###GET
+https://cse341-lesson1.onrender.com/contacts/?id=632fa26fde834ce10fee5fc8
