@@ -59,4 +59,4 @@ content-type: application/json
 }
 
 ### Delete Contact
-DELETE http://{{prodhost}}/contacts/63379e6dd226853a6b6edc30
+DELETE http://{{prodhost}}/contacts/6337ae2525deebb992c2501c
