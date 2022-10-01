@@ -1,13 +1,58 @@
-// LOCALHOST
-### GET
-http://localhost:3000/contacts
 
-###GET
-http://localhost:3000/contacts/?id=632fa26fde834ce10fee5fc8
+@localhost = localhost
+@prodhost = cse341-lesson1.onrender.com
+
+
+// LOCALHOST
+
+### Get All Contacts
+GET http://{{localhost}}:3000/contacts
+
+### Get Single Contact
+GET http://{{localhost}}:3000/contacts/?id=63378fa35731d052ff54ee82
+
+### Create Contact 
+POST http://{{localhost}}:3000/contacts/ HTTP/1.1 content-type: application/json
+
+{
+    "name": "Test",
+    "phoneNumber": "2084033656"
+}
+
+### Update Contact
+PUT http://{{localhost}}:3000/contacts/6337987c5d31d8309bfc088a HTTP/1.1 content-type: application/json
+
+{
+    "name": "New name",
+    "phoneNumber": "34563456"
+}
+
+### Delete Contact
+DELETE http://{{localhost}}:3000/contacts/6337987c5d31d8309bfc088a
 
 // PRODUCTION
-### GET
-https://cse341-lesson1.onrender.com/contacts
 
-###GET
-https://cse341-lesson1.onrender.com/contacts/?id=632fa26fde834ce10fee5fc8
+### Get All Contacts
+GET http://{{prodhost}}/contacts
+
+### Get Single Contact
+GET http://{{prodhost}}/contacts/?id=63378fa35731d052ff54ee82
+
+### Create Contact 
+POST http://{{prodhost}}/contacts/ HTTP/1.1 content-type: application/json
+
+{
+    "name": "Test",
+    "phoneNumber": "2084033656"
+}
+
+### Update Contact
+PUT http://{{prodhost}}/contacts/6337987c5d31d8309bfc088a HTTP/1.1 content-type: application/json
+
+{
+    "name": "New name",
+    "phoneNumber": "34563456"
+}
+
+### Delete Contact
+DELETE http://{{prodhost}}/contacts/6337987c5d31d8309bfc088a
