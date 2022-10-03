@@ -9,28 +9,34 @@
 GET http://{{localhost}}:3000/contacts
 
 ### Get Single Contact
-GET http://{{localhost}}:3000/contacts/?id=6337b3b212a5d85a8e49ddc0
+GET http://{{localhost}}:3000/contacts/?id=6337b5f65b300b15049eb1bb
 
 ### Create Contact 
 POST http://{{localhost}}:3000/contacts/ HTTP/1.1 
 content-type: application/json
 
 {
-    "name": "Test",
-    "phoneNumber": "2084033656"
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@contacts.com",
+    "favoriteColor": "blue",
+    "birthday": "10/20/1995",
 }
 
 ### Update Contact
-PUT http://{{localhost}}:3000/contacts/6337b3b212a5d85a8e49ddc0 HTTP/1.1 
+PUT http://{{localhost}}:3000/contacts/6337b5f65b300b15049eb1bb HTTP/1.1 
 content-type: application/json
 
 {
-    "name": "New name",
-    "phoneNumber": "34563456"
+    "firstName": "Mark",
+    "lastName": "Gates",
+    "email": "mark@contacts.com",
+    "favoriteColor": "red",
+    "birthday": "11/23/1956",
 }
 
 ### Delete Contact
-DELETE http://{{localhost}}:3000/contacts/6337b3b212a5d85a8e49ddc0
+DELETE http://{{localhost}}:3000/contacts/6337b5f65b300b15049eb1bb
 
 // PRODUCTION
 
@@ -38,25 +44,31 @@ DELETE http://{{localhost}}:3000/contacts/6337b3b212a5d85a8e49ddc0
 GET http://{{prodhost}}/contacts
 
 ### Get Single Contact
-GET http://{{prodhost}}/contacts/?id=6337b2e088261cb660ae4313
+GET http://{{prodhost}}/contacts/?id=6337b63c88261cb660ae4314
 
 ### Create Contact 
 POST http://{{prodhost}}/contacts/ HTTP/1.1 
 content-type: application/json
 
 {
-    "name": "Test",
-    "phoneNumber": "2084033656"
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@contacts.com",
+    "favoriteColor": "blue",
+    "birthday": "10/20/1995",
 }
 
 ### Update Contact
-PUT http://{{prodhost}}/contacts/6337b21640f0135056ec9411 HTTP/1.1 
+PUT http://{{prodhost}}/contacts/6337b63c88261cb660ae4314 HTTP/1.1 
 content-type: application/json
 
 {
-    "name": "New name",
-    "phoneNumber": "34563456"
+    "firstName": "Mark",
+    "lastName": "Gates",
+    "email": "mark@contacts.com",
+    "favoriteColor": "red",
+    "birthday": "11/23/1956",
 }
 
 ### Delete Contact
-DELETE http://{{prodhost}}/contacts/6337b21640f0135056ec9411
+DELETE http://{{prodhost}}/contacts/6337b63c88261cb660ae4314

@@ -20,8 +20,11 @@ const getContacts = async (req, res) => {
 const createContact = async (req, res) => {
 
   const contact = {
-    name: req.body.name,
-    phoneNumber: req.body.phoneNumber,
+    firstName: req.body.name,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday,
   };
 
   const savedContact = await mongodb.getDb().db().collection(collectionName).insertOne(contact);
@@ -35,10 +38,15 @@ const createContact = async (req, res) => {
 
 const updateContact = async (req, res) => {
   const id = new ObjectId(req.params.id);
+  
   const contact = {
-    name: req.body.name,
-    phoneNumber: req.body.phoneNumber,
+    firstName: req.body.name,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday,
   };
+
   const updatedContact = await mongodb.getDb().db().collection(collectionName).replaceOne({ _id: id }, contact);
   if (updatedContact.modifiedCount > 0) {
     res.status(204).send();
