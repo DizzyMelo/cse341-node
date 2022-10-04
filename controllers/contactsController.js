@@ -18,9 +18,8 @@ const getContacts = async (req, res) => {
 };
 
 const createContact = async (req, res) => {
-
   const contact = {
-    firstName: req.body.name,
+    firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
@@ -40,7 +39,7 @@ const updateContact = async (req, res) => {
   const id = new ObjectId(req.params.id);
   
   const contact = {
-    firstName: req.body.name,
+    firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
