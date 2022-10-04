@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use('/', index);
 app.use('/contacts', contactRouter);
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if (err) {
       console.log(err);
     } else {
