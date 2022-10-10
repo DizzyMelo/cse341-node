@@ -5,7 +5,7 @@
     "description": "This api provides methods to manage personal contacts",
     "version": "1.0.0"
   },
-  "host": "https://cse341-lesson1.onrender.com",
+  "host": "cse341-lesson1.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -34,6 +34,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
           }
         }
       },
@@ -155,6 +158,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
           }
         }
       },
