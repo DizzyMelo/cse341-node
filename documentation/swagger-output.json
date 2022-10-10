@@ -11,7 +11,14 @@
     "https"
   ],
   "paths": {
-    "/": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/contacts/": {
       "get": {
         "description": "",
         "produces": [
@@ -71,7 +78,7 @@
         }
       }
     },
-    "/{id}": {
+    "/contacts/{id}": {
       "put": {
         "description": "",
         "parameters": [
