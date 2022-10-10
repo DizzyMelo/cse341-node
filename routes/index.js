@@ -1,6 +1,7 @@
-const routes = require('express').Router();
-const { index } = require('../controllers/index');
+const express = require('express');
+const router = express.Router();
 
-routes.get('/', index);
+router.use('/', require('./swaggerRoutes'));
+router.use('/contacts', require('./contactsRoutes'));
 
-module.exports = routes;
+module.exports = router;

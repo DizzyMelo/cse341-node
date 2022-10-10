@@ -1,14 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const mongodb = require('./db/connection');
 const port = process.env.PORT || 3000;
-const index = require('./routes/')
-const contactRouter = require('./routes/contactsRoutes')
 
 app.use(bodyParser.json());
-app.use('/', index);
-app.use('/contacts', contactRouter);
+app.use(cors());
+app.options('*', cors());
+app.use('/', require('./routes'));
 
 mongodb.initDb((err) => {
     if (err) {
