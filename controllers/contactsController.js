@@ -6,8 +6,14 @@ const collectionName = 'contacts';
 const getContacts = async (req, res) => {
   if (req.query.id) {
     const contact = await mongodb.getDb().db().collection(collectionName).findOne({ _id: new ObjectId(req.query.id) });
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(contact);
+
+    if (!contact) {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(204).json();
+    } else {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(contact);
+    }
   } else {
     const contactResult = await mongodb.getDb().db().collection(collectionName).find();
     contactResult.toArray().then((contacts) => {
