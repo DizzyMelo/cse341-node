@@ -10,7 +10,7 @@ const doc = {
 };
 
 const outputFile = './documentation/swagger-output.json';
-const endpointsFiles = ['./routes/index.js', './routes/contactsRoutes.js'];
+const endpointsFiles = ['./routes/contactsRoutes.js'];
 
 /* NOTE: if you use the express Router, you must pass in the 
    'endpointsFiles' only the root file where the route starts,
